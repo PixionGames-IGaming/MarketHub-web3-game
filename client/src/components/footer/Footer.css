@@ -1,0 +1,49 @@
+footer {
+    background: linear-gradient(180deg, rgba(10, 15, 29, 0.94), rgba(8, 12, 22, 0.98));
+    border-top: 1px solid rgba(166, 109, 255, 0.3);
+    box-shadow: 0 -18px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(12px);
+}
+
+footer .logoIco {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--sg-gold);
+    text-shadow: 0 0 18px rgba(245, 199, 109, 0.45);
+}
+
+footer .linklist a {
+    opacity: .9;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s all;
+}
+
+footer .sochialLink a {
+    all: unset;
+    color: var(--white);
+    font-size: 1.3rem;
+    opacity: .9;
+}
+
+footer .linklist a,
+footer .sochialLink a {
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .sochialLink a:hover,
+footer .linklist a.active,
+footer .linklist a:hover {
+    color: var(--sg-gold);
+    text-shadow: 0 0 8px rgba(245, 199, 109, 0.5);
+}
+
+footer hr {
+    margin: 0;
+    color: rgba(166, 109, 255, 0.25);
+}
+
+footer .copyriter {
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
