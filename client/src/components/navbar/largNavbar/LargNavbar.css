@@ -1,0 +1,332 @@
+#Lnav {
+    background: linear-gradient(180deg, rgba(13, 19, 36, 0.96), rgba(10, 15, 28, 0.96));
+    border: 1px solid rgba(140, 119, 255, 0.3);
+    border-radius: 22px;
+    box-shadow: 0 18px 38px rgba(5, 7, 17, 0.52), inset 0 1px 0 rgba(255,255,255,0.06);
+    padding: 0.65rem 1rem;
+    margin: 1rem auto 0.9rem;
+    backdrop-filter: blur(12px);
+    max-width: 1460px;
+}
+
+#Lnav .container-fluid {
+    width: 100%;
+    gap: 1rem;
+}
+
+#Lnav .nav-prand {
+    min-width: 170px;
+}
+
+#Lnav .nav-prand img {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 18px rgba(245, 199, 109, 0.4));
+}
+
+#Lnav .nav-prand span {
+    font-size: 1.35rem;
+    color: var(--white);
+    letter-spacing: 0.02em;
+}
+
+#Lnav .nav-prand .lemon {
+    color: var(--sg-gold);
+    text-shadow: 0 0 18px rgba(245, 199, 109, 0.7);
+}
+
+#Lnav .navbar-collapse {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+#Lnav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+#Lnav ul li {
+    display: flex;
+    align-items: center;
+}
+
+#Lnav ul li a {
+    cursor: pointer;
+    transition: 0.25s all;
+    color: var(--sg-text-muted);
+    font-size: 0.83rem;
+    text-decoration: none;
+    padding: 0.7rem 0.85rem;
+    border-radius: 10px;
+    font-family: WorkSans-M, sans-serif;
+    letter-spacing: 0.02em;
+}
+
+#Lnav ul li a:hover,
+#Lnav ul li a.active {
+    color: var(--white);
+    background: linear-gradient(135deg, rgba(125, 77, 255, 0.24), rgba(245, 199, 109, 0.08));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 18px rgba(125, 77, 255, 0.14);
+}
+
+.sg-nav-search {
+    position: relative;
+    width: min(38vw, 360px);
+    margin-left: 0.75rem;
+    transform: translateY(-2px);
+    flex: 1 1 auto;
+    max-width: 360px;
+}
+
+.sg-nav-search form {
+    margin: 0;
+    position: relative;
+}
+
+.sg-nav-search .sg-nav-search-results {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    width: 100%;
+    background: linear-gradient(165deg, rgba(17, 22, 40, 0.98), rgba(8, 12, 22, 0.98));
+    border: 1px solid rgba(166, 109, 255, 0.36);
+    border-radius: 14px;
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.38), 0 0 28px rgba(125, 77, 255, 0.12);
+    padding: 0.45rem;
+    z-index: 40;
+    backdrop-filter: blur(8px);
+}
+
+.sg-nav-search .sg-nav-search-results button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    border-radius: 10px;
+    padding: 0.52rem 0.62rem;
+    display: grid;
+    gap: 0.14rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sg-nav-search .sg-nav-search-results button:hover {
+    background: linear-gradient(135deg, rgba(125, 77, 255, 0.18), rgba(245, 199, 109, 0.06));
+    transform: translateX(2px);
+}
+
+.sg-nav-search .sg-nav-search-results button span {
+    color: var(--white);
+    font-size: 0.83rem;
+    font-family: WorkSans-M, sans-serif;
+}
+
+.sg-nav-search .sg-nav-search-results button small {
+    color: var(--sg-text-muted);
+    font-size: 0.69rem;
+    font-family: SpaceMono-R, monospace;
+}
+
+.sg-nav-search input {
+    width: 100%;
+    padding: 0.72rem 0.95rem 0.72rem 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(166, 109, 255, 0.26);
+    background:
+        radial-gradient(circle at 8% 30%, rgba(125, 77, 255, 0.08), transparent 28%),
+        linear-gradient(140deg, rgba(27, 31, 48, 0.96), rgba(14, 18, 31, 0.96));
+    color: var(--white);
+    font-family: WorkSans-R, sans-serif;
+    font-size: 0.82rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 10px 18px rgba(0, 0, 0, 0.18);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sg-nav-search .sg-nav-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.78rem;
+    transform: translateY(-50%);
+    color: rgba(245, 199, 109, 0.9);
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.sg-nav-search input::placeholder {
+    color: var(--sg-text-muted);
+}
+
+.sg-nav-search input:focus {
+    outline: none;
+    border-color: rgba(245, 199, 109, 0.6);
+    box-shadow: 0 0 0 3px rgba(245, 199, 109, 0.12), 0 14px 28px rgba(0, 0, 0, 0.24);
+    transform: translateY(-1px);
+}
+
+.sg-nav-wallet {
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: auto;
+}
+
+.sg-nav-universe {
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(125, 77, 255, 0.15), rgba(245, 199, 109, 0.08));
+    border: 1px solid rgba(166, 109, 255, 0.36);
+    color: var(--sg-gold);
+    font-family: WorkSans-S, sans-serif;
+    font-size: 0.72rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.sg-nav-balance {
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(12, 20, 36, 0.98), rgba(17, 24, 39, 0.96));
+    border: 1px solid rgba(166, 109, 255, 0.2);
+    color: var(--white);
+    font-family: SpaceMono-R, monospace;
+    font-size: 0.78rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+#Lnav .parIcon {
+    font-size: 1.1rem;
+    color: var(--sg-gold);
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+#Lnav a:hover .parIcon,
+#Lnav a.active .parIcon {
+    color: var(--white);
+}
+
+#Lnav .favoritesLenth {
+    width: 20px;
+    height: 20px;
+    background: var(--sg-gold);
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    right: -90%;
+    transform: translate(-90%, -20%);
+    color: var(--sg-bg);
+    font-size: .7rem;
+    font-weight: Rubik-B;
+}
+
+#Lnav .userToolsComponant .btnTempUser img {
+    border-radius: 50%;
+    border: 2px solid rgba(245, 199, 109, 0.9);
+    width: 100%;
+    transition: .2s all;
+    box-shadow: 0 0 18px rgba(245, 199, 109, 0.2);
+}
+
+#Lnav .userToolsComponant .btnTempUser img:hover {
+    box-shadow: 0 0 22px rgba(245, 199, 109, 0.5);
+}
+
+#Lnav .userToolsComponant .btnTempUser .parIcon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 199, 109, 0.7);
+    transition: .2s all;
+    background: rgba(245, 199, 109, 0.08);
+}
+
+#Lnav .userToolsComponant .btnTempUser .parIcon .Icon {
+    color: var(--sg-gold);
+    font-size: 1.8rem;
+    opacity: 1;
+}
+
+#Lnav .userToolsComponant .userMenu {
+    display: none;
+    width: 180px;
+    position: absolute;
+    top: 42%;
+    left: 85%;
+    transform: translate(-85%, 36%);
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(17, 21, 34, 0.98), rgba(11, 16, 28, 0.98));
+    border: 1px solid rgba(166, 109, 255, 0.35);
+    border-radius: 14px;
+    padding: 0.8rem 0.6rem;
+    color: var(--white);
+    box-shadow: 0 22px 38px rgba(0, 0, 0, 0.38), 0 0 18px rgba(125, 77, 255, 0.14);
+}
+
+#Lnav .userToolsComponant .userMenu a.active {
+    color: var(--sg-gold);
+}
+
+#Lnav .userToolsComponant .userMenu .menuButton:hover {
+    color: var(--sg-gold);
+}
+
+#Lnav .userToolsComponant .triangle-up {
+    border-bottom: 12px solid rgba(17, 21, 34, 0.98);
+}
+
+#Lnav .PiUser {
+    font-size: .9rem;
+}
+
+#Lnav .userToolsComponant {
+    position: relative;
+}
+
+#Lnav .userToolsComponant .btnTempUser {
+    width: 50px;
+    height: 50px;
+}
+
+#Lnav .userToolsComponant .userMenu.show {
+    display: block;
+}
+
+#Lnav .userToolsComponant .userMenu a {
+    all: unset;
+}
+
+#Lnav .userToolsComponant .userMenu .menuButton {
+    cursor: pointer;
+    font-size: .95rem;
+    transition: 0.3s all;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.5rem;
+    border-radius: 8px;
+}
+
+#Lnav .userToolsComponant .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid rgba(17, 21, 34, 0.98);
+}
+
+#Lnav .navbar-collapse > a.active {
+    color: var(--white);
+    background: linear-gradient(135deg, rgba(125, 77, 255, 0.22), rgba(245, 199, 109, 0.12));
+    border-radius: 10px;
+}
+
+    position: absolute;
+    top: 0;
+    left: 77%;
+    transform: translate(-77%, 0);
+    margin-top: -10px;
+    z-index: 6;
+}
